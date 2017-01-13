@@ -1,0 +1,4 @@
+<h1>Sex</h1>
+<%= for todo <- @todos do %>
+	<%= todo.description %>
+<% end %>

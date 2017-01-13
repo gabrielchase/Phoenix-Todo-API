@@ -5,7 +5,8 @@ defmodule TodoApi.TodoController do
 
   def index(conn, _params) do
     todos = Repo.all(Todo)
-    render(conn, "index.json", todos: todos)
+
+    render(conn, :index, todos: todos)
   end
 
   def create(conn, %{"todo" => todo_params}) do
